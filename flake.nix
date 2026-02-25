@@ -12,7 +12,7 @@
     };
     in {
       packages.${system}.default =
-        (pkgs.ollama.override { acceleration = null; }).overrideAttrs (_: {
+        (pkgs.ollama.override { acceleration = "cuda"; }).overrideAttrs (_: {
           version = "local";
           src = self;
           vendorHash = "sha256-dGMx8ltvlqhdzAfvvE5EliTcTNxGnzwcyLQTP71fGwA=";
